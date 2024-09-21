@@ -80,6 +80,12 @@ dependencies {
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compilation)
 
+    //Navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.support.fragments)
+
     //Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
