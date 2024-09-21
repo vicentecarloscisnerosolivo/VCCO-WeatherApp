@@ -1,6 +1,8 @@
 plugins {
+    kotlin("kapt")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -50,15 +52,41 @@ android {
 }
 
 dependencies {
-
+    //Core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    //Android Coroutines
+    implementation(libs.kotlinx.coroutines.android)
+
+    //UI
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    //viewModel
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    //Network calls
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.okHttp)
+    implementation(libs.okHttp.logging.interceptor)
+
+    //Hilt
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.compilation)
+
+    //Navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.support.fragments)
+
+    //Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,4 +94,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+}
+
+kapt {
+    correctErrorTypes = true
 }
