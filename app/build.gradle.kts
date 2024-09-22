@@ -20,6 +20,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/data/2.5/weather\"")
+        buildConfigField("String", "API_KEY", "\"5662967fcb674a3d31dbb0f174e451ef\"")
     }
 
     buildTypes {
@@ -40,6 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
