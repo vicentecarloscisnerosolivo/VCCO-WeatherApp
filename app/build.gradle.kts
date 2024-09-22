@@ -20,7 +20,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/data/2.5/weather\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/data/2.5/\"")
         buildConfigField("String", "API_KEY", "\"5662967fcb674a3d31dbb0f174e451ef\"")
     }
 
@@ -73,11 +73,29 @@ dependencies {
     //viewModel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
-    //Network calls
+    //Retrofit
     implementation(libs.retrofit)
+
+    //Gson
     implementation(libs.gson)
+    implementation(libs.gson.converter)
+
+    //OkHTTP
     implementation(libs.okHttp)
     implementation(libs.okHttp.logging.interceptor)
+
+    //RXJava
+    implementation(libs.rxjava)
+    implementation(libs.rxjava.adapter)
+
+    //RxAndroid
+    implementation(libs.rxandroid)
+
+    //Streams
+    implementation(libs.androidx.lifecycle.reactive.streams)
+
+    //Multidex
+    implementation(libs.androidx.multidex)
 
     //Hilt
     implementation(libs.dagger.hilt)

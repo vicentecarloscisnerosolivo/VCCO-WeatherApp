@@ -50,5 +50,8 @@ internal class ModelConstants {
         const val CURRENT_WEATHER_TIME_ZONE_RESPONSE = "timezone"
         const val CURRENT_WEATHER_ID_RESPONSE = "id"
         const val CURRENT_WEATHER_NAME_RESPONSE = "NAME"
+
+        //WeatherResponse Response
+        const val RESPONSE_DATA = ""
     }
 }

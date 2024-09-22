@@ -4,11 +4,16 @@ import com.google.gson.annotations.SerializedName
 import java.sql.Timestamp
 import com.vcco.weatherapp.model.utils.ModelConstants as Constants
 
+/**
+ * Current Weather from specific location retrieved from https://openweathermap.org/
+ *
+ * DEFAULT VALUES: Configured for metric values
+ */
 data class CurrentWeather(
     @SerializedName(Constants.CURRENT_WEATHER_COORDINATE_RESPONSE)
     val coordinates: Coordinates,
     @SerializedName(Constants.CURRENT_WEATHER_CONDITIONS_RESPONSE)
-    val conditions: Conditions,
+    val conditions: List<Conditions>,
     @SerializedName(Constants.CURRENT_WEATHER_TEMPERATURE_RESPONSE)
     val temperature: Temperature,
     @SerializedName(Constants.CURRENT_WEATHER_VISIBILITY_RESPONSE)
@@ -18,17 +23,37 @@ data class CurrentWeather(
     @SerializedName(Constants.CURRENT_WEATHER_CLOUDS_RESPONSE)
     val clouds: Clouds,
     @SerializedName(Constants.CURRENT_WEATHER_RAIN_RESPONSE)
-    val rain: Rain?,
+    val rain: Rain,
     @SerializedName(Constants.CURRENT_WEATHER_SNOW_RESPONSE)
-    val snow: Snow?,
+    val snow: Snow,
+    /**
+     * Time when the data was calculated
+     *
+     * Value given from the API
+     */
     @SerializedName(Constants.CURRENT_WEATHER_DATA_CALCULATION_RESPONSE)
-    val dataCalculation: Timestamp,
+    val dataCalculation: Long,
     @SerializedName(Constants.CURRENT_WEATHER_SUN_TIME_RESPONSE)
     val sunTime: SunTime,
+    /**
+     * Shift in seconds from UTC
+     *
+     * Value given from the API
+     */
     @SerializedName(Constants.CURRENT_WEATHER_TIME_ZONE_RESPONSE)
     val timeZone: Long,
+    /**
+     * City Id
+     *
+     * Value given from the API
+     */
     @SerializedName(Constants.CURRENT_WEATHER_ID_RESPONSE)
     val id: Int,
+    /**
+     * City Name
+     *
+     * Value given from the API
+     */
     @SerializedName(Constants.CURRENT_WEATHER_NAME_RESPONSE)
     val name: String
 )

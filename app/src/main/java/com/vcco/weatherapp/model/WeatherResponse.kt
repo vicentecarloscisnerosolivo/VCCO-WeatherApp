@@ -3,10 +3,7 @@ package com.vcco.weatherapp.model
 import com.google.gson.annotations.SerializedName
 import com.vcco.weatherapp.model.utils.ModelConstants as Constants
 
-/**
- * Shows Cloud coverage in the requested location
- */
-data class Clouds(
-    @SerializedName(Constants.CLOUD_COVERAGE_RESPONSE)
-    val coverage: Int
+data class WeatherResponse(
+    @SerializedName(Constants.RESPONSE_DATA)
+    val response: List<CurrentWeather>
 )
