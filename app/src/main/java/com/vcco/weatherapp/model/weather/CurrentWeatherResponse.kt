@@ -1,7 +1,6 @@
-package com.vcco.weatherapp.model
+package com.vcco.weatherapp.model.weather
 
 import com.google.gson.annotations.SerializedName
-import java.sql.Timestamp
 import com.vcco.weatherapp.model.utils.ModelConstants as Constants
 
 /**
@@ -9,7 +8,7 @@ import com.vcco.weatherapp.model.utils.ModelConstants as Constants
  *
  * DEFAULT VALUES: Configured for metric values
  */
-data class CurrentWeather(
+data class CurrentWeatherResponse(
     @SerializedName(Constants.CURRENT_WEATHER_COORDINATE_RESPONSE)
     val coordinates: Coordinates,
     @SerializedName(Constants.CURRENT_WEATHER_CONDITIONS_RESPONSE)

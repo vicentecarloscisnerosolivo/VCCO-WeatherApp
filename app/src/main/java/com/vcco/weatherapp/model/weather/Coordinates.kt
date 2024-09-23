@@ -1,4 +1,4 @@
-package com.vcco.weatherapp.model
+package com.vcco.weatherapp.model.weather
 
 import com.google.gson.annotations.SerializedName
 import com.vcco.weatherapp.model.utils.ModelConstants as Consntants
