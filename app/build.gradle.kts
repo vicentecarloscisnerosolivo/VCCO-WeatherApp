@@ -20,7 +20,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/data/2.5/\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/\"")
         buildConfigField("String", "API_KEY", "\"5662967fcb674a3d31dbb0f174e451ef\"")
     }
 
