@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.home.HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.WeatherApp"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
