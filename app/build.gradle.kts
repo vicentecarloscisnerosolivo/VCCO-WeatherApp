@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.vcco.weatherapp"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -22,6 +22,7 @@ android {
         }
         buildConfigField("String", "BASE_URL", "\"https://api.openweathermap.org/\"")
         buildConfigField("String", "API_KEY", "\"5662967fcb674a3d31dbb0f174e451ef\"")
+        buildConfigField("String", "PREFERENCE_FILE", "\"user_preference\"")
     }
 
     buildTypes {
@@ -99,7 +100,15 @@ dependencies {
 
     //Hilt
     implementation(libs.dagger.hilt)
+    implementation(libs.androidx.datastore.core.android)
+    implementation(libs.androidx.runtime.livedata)
     kapt(libs.dagger.hilt.compilation)
+
+    //Location
+    implementation(libs.play.services.location)
+
+    //Data source
+    implementation(libs.androidx.datasource.preferences)
 
     //Navigation
     implementation(libs.androidx.navigation.compose)
@@ -116,7 +125,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     testImplementation(libs.mockito.core)
-    testImplementation(libs.mockito.kotlin)
 }
 
 kapt {

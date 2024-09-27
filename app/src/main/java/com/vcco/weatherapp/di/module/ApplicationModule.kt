@@ -1,5 +1,8 @@
 package com.vcco.weatherapp.di.module
 
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import com.vcco.weatherapp.BuildConfig
 import com.vcco.weatherapp.network.service.OpenWeatherService
 import dagger.Module
@@ -60,4 +63,5 @@ class ApplicationModule {
     @Singleton
     fun provideOpenWeatherService(retrofit: Retrofit): OpenWeatherService =
         retrofit.create(OpenWeatherService::class.java)
+
 }

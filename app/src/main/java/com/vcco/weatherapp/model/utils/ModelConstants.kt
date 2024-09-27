@@ -49,7 +49,7 @@ internal object ModelConstants {
     const val CURRENT_WEATHER_SUN_TIME_RESPONSE = "sys"
     const val CURRENT_WEATHER_TIME_ZONE_RESPONSE = "timezone"
     const val CURRENT_WEATHER_ID_RESPONSE = "id"
-    const val CURRENT_WEATHER_NAME_RESPONSE = "NAME"
+    const val CURRENT_WEATHER_NAME_RESPONSE = "name"
 
 
     //Geocode Response
