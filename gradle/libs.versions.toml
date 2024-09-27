@@ -16,8 +16,12 @@ multidexVersion = "2.0.1"
 okHttpVersion = "4.12.0"
 hiltVersion = "2.51.1"
 rxJavaVersion = "3.0.0"
-mockitoVersion = "5.2.1"
+mockitoVersion = "5.0.0"
 navigationVersion = "2.8.1"
+playServicesLocation = "21.3.0"
+dataSourceVersion = "1.0.0"
+datastoreCoreAndroid = "1.1.1"
+runtimeLivedata = "1.7.2"
 
 
 [libraries]
@@ -56,6 +60,10 @@ androidx-navigation-fragment = { group = "androidx.navigation", name = "navigati
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationVersion" }
 androidx-navigation-support-fragments = { group = "androidx.navigation", name = "navigation-dynamic-features-fragment", version.ref = "navigationVersion" }
 androidx-navigation-safeargs = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigationVersion" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+androidx-datasource-preferences = {group = "androidx.datastore", name="datastore-preferences", version.ref = "dataSourceVersion"}
+androidx-datastore-core-android = { group = "androidx.datastore", name = "datastore-core-android", version.ref = "datastoreCoreAndroid" }
+androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

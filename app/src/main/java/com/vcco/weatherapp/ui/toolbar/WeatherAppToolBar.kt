@@ -1,4 +1,4 @@
-package com.vcco.weatherapp.ui
+package com.vcco.weatherapp.ui.toolbar
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack

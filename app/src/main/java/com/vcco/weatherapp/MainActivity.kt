@@ -78,7 +78,7 @@ class MainActivity : ComponentActivity() {
         timer.cancel()
     }
 
-    private fun launchNextScreen(){
+    private fun launchNextScreen() {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }

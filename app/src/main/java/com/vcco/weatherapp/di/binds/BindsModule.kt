@@ -2,6 +2,7 @@ package com.vcco.weatherapp.di.binds
 
 import com.vcco.weatherapp.network.apiHelper.OpenWeatherApiHelper
 import com.vcco.weatherapp.network.apiHelper.OpenWeatherApiHelperImpl
+import com.vcco.weatherapp.repositories.OpenWeatherRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -22,5 +23,4 @@ abstract class BindsModule {
      */
     @Binds
     abstract fun provideApiHelper(openWeatherApiHelperImpl: OpenWeatherApiHelperImpl): OpenWeatherApiHelper
-
 }

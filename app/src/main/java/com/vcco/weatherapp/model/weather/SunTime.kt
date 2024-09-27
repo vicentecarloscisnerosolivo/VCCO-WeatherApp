@@ -9,7 +9,7 @@ import com.vcco.weatherapp.model.utils.ModelConstants as Constants
 data class SunTime(
     val country: String,
     @SerializedName(Constants.SUN_TIME_SUNRISE_TIME_RESPONSE)
-    val sunRiseTime: Long,
+    val sunRiseTimestamp: Long,
     @SerializedName(Constants.SUN_TIME_SUNSET_TIME_RESPONSE)
     val sunSetTimestamp: Long
 )
