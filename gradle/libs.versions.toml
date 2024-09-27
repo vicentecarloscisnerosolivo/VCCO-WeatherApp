@@ -22,7 +22,8 @@ playServicesLocation = "21.3.0"
 dataSourceVersion = "1.0.0"
 datastoreCoreAndroid = "1.1.1"
 runtimeLivedata = "1.7.2"
-
+archCoreTesting = "2.2.0"
+uiTestJunit4Android = "1.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,7 +55,7 @@ androidx-lifecycle-reactive-streams = { group = "androidx.lifecycle", name = "li
 androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidexVersion" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoVersion" }
-mockito-kotlin = { group = "org.mockito", name = "mockito-kotlin", version.ref = "mockitoVersion" }
+mockito-android = { group = "org.mockito", name = "mockito-android", version.ref = "mockitoVersion" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationVersion" }
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationVersion" }
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationVersion" }
@@ -64,6 +65,8 @@ play-services-location = { group = "com.google.android.gms", name = "play-servic
 androidx-datasource-preferences = {group = "androidx.datastore", name="datastore-preferences", version.ref = "dataSourceVersion"}
 androidx-datastore-core-android = { group = "androidx.datastore", name = "datastore-core-android", version.ref = "datastoreCoreAndroid" }
 androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
+androidx-arch-core ={group= "androidx.arch.core", name = "core-testing", version.ref="archCoreTesting"}
+androidx-ui-test-junit4-android = { group = "androidx.compose.ui", name = "ui-test-junit4-android", version.ref = "uiTestJunit4Android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

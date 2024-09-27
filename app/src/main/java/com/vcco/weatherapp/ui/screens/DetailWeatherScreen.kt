@@ -1,4 +1,4 @@
-package com.vcco.weatherapp.ui
+package com.vcco.weatherapp.ui.screens
 
 import android.text.format.DateFormat
 import androidx.compose.foundation.Image
