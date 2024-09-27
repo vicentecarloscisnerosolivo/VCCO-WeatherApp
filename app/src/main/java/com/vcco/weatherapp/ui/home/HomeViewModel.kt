@@ -14,6 +14,7 @@ import com.vcco.weatherapp.BuildConfig
 import com.vcco.weatherapp.R
 import com.vcco.weatherapp.model.weather.CurrentWeatherResponse
 import com.vcco.weatherapp.repositories.OpenWeatherRepository
+import com.vcco.weatherapp.repositories.OpenWeatherRepositoryJava
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -27,7 +28,8 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val repository: OpenWeatherRepository
+    private val repository: OpenWeatherRepository,
+    private val javaRepositoryJava: OpenWeatherRepositoryJava
 ) : ViewModel() {
     /**
      * Value used for Log identification
@@ -219,7 +221,7 @@ class HomeViewModel @Inject constructor(
     fun searchWeatherFromLocation(latitude: Float, longitude: Float) {
         _isLoading.postValue(true)
         viewModelScope.launch {
-            repository.getLocationInfoFromCoordinates(latitude, longitude)
+            javaRepositoryJava.getLocationInfoFromCoordinates(latitude, longitude)
                 .observeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe({ response ->
