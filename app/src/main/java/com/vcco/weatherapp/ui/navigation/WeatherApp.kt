@@ -31,7 +31,7 @@ import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.location.LocationServices
 import com.vcco.weatherapp.R
 import com.vcco.weatherapp.navigation.WeatherScreen
-import com.vcco.weatherapp.ui.DetailWeatherScreen
+import com.vcco.weatherapp.ui.screens.DetailWeatherScreen
 import com.vcco.weatherapp.ui.toolbar.WeatherAppBar
 import com.vcco.weatherapp.ui.home.HomeViewModel
 import com.vcco.weatherapp.ui.screens.HomeScreen
